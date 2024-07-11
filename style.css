@@ -93,7 +93,7 @@ html {
       rgba(29, 29, 29, 0.8),
       rgba(29, 29, 29, 0.8)
     ),
-    url(../midia/foto\ 1.jpg); /*imagem*/
+    url(/midia/foto\ 1.jpg); /*imagem*/
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
