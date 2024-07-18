@@ -33,11 +33,12 @@ html {
   align-items: center;
   background-color: #1f1f1f;
   position: fixed;
-  padding-left: 3rem;
+  padding-left: 20rem;
 }
 /*Logo*/
 
 .logo {
+  
   width: 100px;
   height: auto;
   cursor: pointer;
@@ -46,6 +47,7 @@ html {
   white-space: nowrap;
 }
 .logo h3 {
+  
   color: white;
   font-size: 1.8rem;
   display: inline-block;
@@ -292,10 +294,11 @@ html {
   font-size: 3.6rem;
 }
 .contatos-secao {
-  width: 650px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   font-size: 1.8rem;
+
 }
 .contatos-secao div {
   cursor: pointer;
@@ -376,7 +379,7 @@ footer {
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   html {
-    font-size: 45%;
+    font-size: 40%;
   }
   .itens-cardapio {
     width: 90%;
@@ -477,9 +480,8 @@ footer {
   }
 
   .contatos-secao {
-    display: block;
-    text-align: center;
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .itens-cardapio .info h3 {
@@ -497,8 +499,8 @@ footer {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 150px 150px;
-    margin-left: 12rem;
+    grid-template-columns: 100px 100px;
+    margin-left: 5rem;
   }
 
   .itens-cardapio .info h4 span {
@@ -521,11 +523,14 @@ footer {
 }
 /* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
+  
   .conteudo-principal h1 {
-    width: 500px;
+    width: 300px;
     text-align: center;
     font-size: 4rem;
+    
   }
+
 
   .conteudo-principal h2 {
     font-size: 2rem;
@@ -542,12 +547,15 @@ footer {
   }
 
   .contatos-secao {
-    width: 600px;
+    display: flex;
+    flex-direction: column;
   }
-}
 @media (max-width: 500px) {
+  
+  
   .contatos-secao {
-    width: 400px;
+    display: flex;
+    flex-direction: column;
   }
   .first-section h1 {
     max-width: 100%;
@@ -559,7 +567,8 @@ footer {
 }
 @media (max-width: 395px) {
   .contatos-secao {
-    width: 395px;
+    display: flex;
+    flex-direction: column;
   }
   .sobre-nos img {
     width: 250px;
@@ -577,4 +586,19 @@ footer {
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
+}
+.btn {
+  width: 64%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem; /* Optional: Adjust margin as needed */
+}
+.itens-cardapio .info h4 span {
+  width: 64%;
+  font-size: 2rem;
+  color: #cea10eb6;
+  margin-left: 1.5rem;
+}
+
 }
