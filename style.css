@@ -22,6 +22,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   background-color: #1f1f1f;
+  scroll-behavior: smooth;
 }
 /*menu*/
 
@@ -38,7 +39,6 @@ html {
 /*Logo*/
 
 .logo {
-  
   width: 100px;
   height: auto;
   cursor: pointer;
@@ -47,7 +47,6 @@ html {
   white-space: nowrap;
 }
 .logo h3 {
-  
   color: white;
   font-size: 1.8rem;
   display: inline-block;
@@ -298,7 +297,6 @@ html {
   flex-direction: column;
   justify-content: space-between;
   font-size: 1.8rem;
-
 }
 .contatos-secao div {
   cursor: pointer;
@@ -523,14 +521,11 @@ footer {
 }
 /* Mobile (max-width: 600px) */
 @media (max-width: 600px) {
-  
   .conteudo-principal h1 {
     width: 300px;
     text-align: center;
     font-size: 4rem;
-    
   }
-
 
   .conteudo-principal h2 {
     font-size: 2rem;
@@ -550,55 +545,52 @@ footer {
     display: flex;
     flex-direction: column;
   }
-@media (max-width: 500px) {
-  
-  
-  .contatos-secao {
+  @media (max-width: 500px) {
+    .contatos-secao {
+      display: flex;
+      flex-direction: column;
+    }
+    .first-section h1 {
+      max-width: 100%;
+      color: #ffc506;
+      font-size: 6rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  }
+  @media (max-width: 395px) {
+    .contatos-secao {
+      display: flex;
+      flex-direction: column;
+    }
+    .sobre-nos img {
+      width: 250px;
+      height: auto;
+      margin-left: 10px;
+    }
+    .contentsobre p {
+      text-align: center;
+      width: 250px;
+    }
+    .first-section h1 {
+      max-width: 100%;
+      color: #ffc506;
+      font-size: 6rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  }
+  .btn {
+    width: 64%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem; /* Optional: Adjust margin as needed */
   }
-  .first-section h1 {
-    max-width: 100%;
-    color: #ffc506;
-    font-size: 6rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+  .itens-cardapio .info h4 span {
+    width: 64%;
+    font-size: 2rem;
+    color: #cea10eb6;
+    margin-left: 1.5rem;
   }
-}
-@media (max-width: 395px) {
-  .contatos-secao {
-    display: flex;
-    flex-direction: column;
-  }
-  .sobre-nos img {
-    width: 250px;
-    height: auto;
-    margin-left: 10px;
-  }
-  .contentsobre p {
-    text-align: center;
-    width: 250px;
-  }
-  .first-section h1 {
-    max-width: 100%;
-    color: #ffc506;
-    font-size: 6rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-}
-.btn {
-  width: 64%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem; /* Optional: Adjust margin as needed */
-}
-.itens-cardapio .info h4 span {
-  width: 64%;
-  font-size: 2rem;
-  color: #cea10eb6;
-  margin-left: 1.5rem;
-}
-
 }
