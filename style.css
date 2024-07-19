@@ -13,6 +13,10 @@
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
+/*tirar barra de rolagem*/
+body::-webkit-scrollbar {
+  display: none;
+}
 
 /*Html*/
 
@@ -23,10 +27,18 @@ html {
   overflow-x: hidden;
   background-color: #1f1f1f;
   scroll-behavior: smooth;
+  scroll-padding: 25rem;
 }
+/*remover azul  sublinhado link footer instagram*/
+a.custom-link {
+  text-decoration: none; /* Remover sublinhado */
+  color: inherit; /* Herdar a cor do elemento pai */
+}
+
 /*menu*/
 
 .content {
+  flex-direction: row;
   width: 100vw;
   height: 70px;
   display: flex;
@@ -35,6 +47,7 @@ html {
   background-color: #1f1f1f;
   position: fixed;
   padding-left: 20rem;
+  flex-direction: none;
 }
 /*Logo*/
 
@@ -50,6 +63,7 @@ html {
   color: white;
   font-size: 1.8rem;
   display: inline-block;
+  white-space: nowrap;
 }
 .logo h3 li a:hover {
   background-color: #333;
@@ -65,7 +79,6 @@ html {
 /*Navbar*/
 
 .content .list-menu {
-  width: 600px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,7 +95,7 @@ html {
 /*efeito amarelo ao passar o mouse*/
 
 .content .list-menu li a:hover {
-  background-color: #333;
+  background-color: transparent;
   border-bottom: 4px solid #ffc506;
   color: #ffc506;
 }
@@ -201,7 +214,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   background-color: #333;
@@ -212,7 +225,7 @@ h1 {
   text-align: center;
   color: white;
   margin-bottom: 40px;
-  font-size: 2rem;
+  font-size: 3 rem;
   text-transform: uppercase;
 }
 p {
@@ -245,13 +258,13 @@ p {
 }
 
 .product h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #ffc506;
   margin-bottom: 10px;
 }
 
 .product p {
-  font-size: 1em;
+  font-size: 1.4em;
   color: white;
   margin-bottom: 10px;
 }
@@ -263,7 +276,7 @@ p {
 
 .product .price {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #e0ad05;
 }
 
@@ -274,6 +287,36 @@ p {
 
 .product .text {
   flex: 1;
+}
+/*botões cardápio*/
+
+.order-button,
+.cart-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.order-button {
+  background-color: #ffc506;
+  color: white;
+}
+
+.cart-button {
+  background-color: #ffc506;
+  color: white;
+}
+
+.order-button:hover {
+  background-color: #333;
+}
+
+.cart-button:hover {
+  background-color: #333;
 }
 
 /*Contatos*/
@@ -336,11 +379,8 @@ footer {
 }
 
 .content {
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 15%;
-  padding-left: 0;
+  height: 7%;
 }
 
 .sobre-nos img {

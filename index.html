@@ -57,14 +57,16 @@
         <h1>Deixe seu dia mais saboroso!!!</h1>
         <h2>Os pães mais recheados da Região</h2>
         <!--Botões-->
-        <div class="btn">
-          <button class="reservar">Reserve o seu</button>
-        </div>
+        <a href="#cardapio">
+          <div class="btn">
+            <button class="reservar" href>Reserve o seu</button>
+          </div>
+        </a>
       </div>
     </section>
     <!--Sobre nós -->
     <section>
-      <section class="sobre-nos" id="sobrenos">
+      <section id="sobrenos" class="sobre-nos">
         <div class="main">
           <div class="contentsobre">
             <h2>Sobre nós</h2>
@@ -89,15 +91,15 @@
             </p>
           </div>
           <div class="img-cozinha">
-            <img src="/midia/foto 2.jpg" alt="" />
+            <!--<img src="/midia/foto 2.jpg" alt="" />        imagem caso queiram no sobre nos       -->
           </div>
         </div>
       </section>
     </section>
-    <!--CARDÁPIO -->
+    <!--CARDÁPIO Fermentação Longa -->
 
     <body>
-      <div class="container">
+      <div class="container" id="cardapio">
         <h1>
           Pães Artesanais
           <p>(Fermentação Longa)</p>
@@ -113,10 +115,11 @@
                 uma massa super fininha, proporcionando curvas e mais curvas
                 desse sabor! Não tem igual, só a Babka é assim!
               </p>
-
               <p class="price">R$ 53,50</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
             </div>
-            <img src="midia/babka_chocolate.jpg" alt="Babka Chocolate" />
+            <img src="midia/babka_chocolate.jpg" />
           </div>
           <div class="product">
             <div class="text">
@@ -127,8 +130,10 @@
               </p>
               <p class="weight">(720g)</p>
               <p class="price">R$ 76,00</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
             </div>
-            <img src="midia/babka_gorgonzola.jpg" alt="Babka Gorgonzola" />
+            <img src="midia/babka_gorgonzola.jpg" />
           </div>
           <div class="product">
             <div class="text">
@@ -142,6 +147,8 @@
               </p>
               <p class="weight">(560g)</p>
               <p class="price">R$ 45,00</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
             </div>
           </div>
           <div class="product">
@@ -152,6 +159,8 @@
                 parmesão e tomates cereja.
               </p>
               <p class="price">R$ 40,50</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
             </div>
             <img
               src="midia/babka_gorgonzola_media.jpg"
@@ -161,21 +170,98 @@
         </div>
       </div>
     </body>
-    <!--Contatos-->
-    <section class="contatos" id="contatos">
-      <h3>Contatos</h3>
-      <div class="contatos-secao">
-        <div>
-          <i class="bi bi-telephone"></i>
-          <span>11-96194-7676</span>
-        </div>
-        <div>
-          <i class="bi bi-instagram"></i>
-          <span>namedidapaes</span>
+
+    <!--Fermentação Natural ( Levain)-->
+    <body>
+      <div class="container">
+        <h1>
+          Pães Artesanais
+          <p>(Fermentação Longa)</p>
+        </h1>
+
+        <div class="product-grid">
+          <div class="product">
+            <div class="text">
+              <h2>Sourdough Clássico</h2>
+              <p>
+                Casquinha crocante, miolo macio e alveolar, o Sourdough é o
+                clássico dos pães. Cheio de benefícios para sua saúde, opção
+                para diversas combinações, está presente desde o café da manhã
+                até deliciosos sanduíches ou as famosas bruschetas!
+              </p>
+
+              <p class="price">R$ 30,00</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
+            </div>
+            <img src="midia/sourdough_classico.jpg" />
+          </div>
+          <div class="product">
+            <div class="text">
+              <h2>Sourdough fatiado</h2>
+              <p>
+                Imagine só que facilidade o seu Sourdough de sempre, só que
+                fatiado! Uau não poderia ser melhor! Perfeito para abrir e usar!
+                Crie os melhores mix para compor o seu sanduíche ou simplesmente
+                seu pão do Dia a Dia!
+              </p>
+
+              <p class="weight">Sem lactose/Sem açúcar/Vegetariano</p>
+              <p class="price">R$ 38,00</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
+            </div>
+            <img src="midia/sourdough_fatiado.jpg" />
+          </div>
+          <div class="product">
+            <div class="text">
+              <h2>Sourdough Multigrãos fatiado</h2>
+              <p>Sourdough Multigrãos fatiado.</p>
+              <p class="weight">
+                Sem lactose/Sem açúcar/Vegetariano/Serve 4 pessoas (750g)
+              </p>
+
+              <p class="price">R$ 55,00</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
+            </div>
+            <img src="midia/sourdough_multigraos_fatiado.jpg" />
+          </div>
+          <div class="product">
+            <div class="text">
+              <h2>Sourdough Abobora Cabocha</h2>
+              <p>Sourdough adicionado de purê de abobora cabocha</p>
+              <p class="weight">
+                Sem lactose/Sem açúcar/Vegano/Vegetariano/Natural/(750g)
+              </p>
+              <p class="price">R$ 42,00</p>
+              <button class="order-button">Pedir</button>
+              <button class="cart-button">Adicionar ao Carrinho</button>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <footer>Desenvolvido por ->Vitor Guimarães</footer>
-    <script src="/script.js"></script>
+      <section class="contatos" id="contatos">
+        <h3>Contatos</h3>
+        <div class="contatos-secao">
+          <div>
+            <i class="bi bi-telephone"></i>
+            <span>11-96194-7676</span>
+          </div>
+          <div>
+            <a
+              href="https://www.instagram.com/namedidapaes/"
+              class="custom-link"
+            >
+              <i class="bi bi-instagram"></i>
+              <span class="insta">namedidapaes</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer>Desenvolvido por ->Vitor Guimarães</footer>
+      <script src="/script.js"></script>
+    </body>
   </body>
+  <!--Contatos-->
 </html>
