@@ -190,90 +190,90 @@ html {
   text-align: center;
   font-size: 1.5rem;
   width: 600px;
+  color: white;
+}
+/*CARDÁPIO2*/
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-/*CARDÁPIO*/
-.cardapio {
-  width: 100vw;
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+p {
+  font-size: 1.3rem;
+  color: #ffc506;
+}
+.product-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  width: calc(50% - 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.product h2 {
+  font-size: 1.5em;
+  color: #ffc506;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1em;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.product .weight {
+  font-style: italic;
+  color: #999;
+}
+
+.product .price {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #e0ad05;
+}
+
+.product:hover {
+  transform: scale(1.05);
   background-color: rgba(12, 12, 12, 0.8);
 }
-.cardapio h2 {
-  font-size: 5rem;
-  color: #e6e6e6;
-  text-transform: uppercase;
-}
 
-.itens-cardapio {
-  width: 90%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 550px));
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-.itens-cardapio .info {
-  background-color: rgba(240, 240, 240, 0.3);
-  border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-.itens-cardapio .info h3 {
-  color: #ffc506;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-.itens-cardapio .info h4 {
-  font-size: 1.4rem;
-  color: #cea10eb6;
-  text-transform: uppercase;
-  margin-bottom: 0.6rem;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 150px 150px;
-  margin-left: 6rem;
-}
-
-.itens-cardapio .info h4 span {
-  font-size: 1.6rem;
-  color: #cea10eb6;
-  margin-left: 1.5rem;
-}
-
-.itens-cardapio div {
-  background-color: black;
-  box-shadow: 0px 0px 7px 2px;
-}
-
-/*imagem*/
-.itens-cardapio img {
-  width: 100%;
-  height: 480px;
-}
-.itens-cardapio .info .pedir {
-  width: 200px;
-  height: 35px;
-  margin-top: 0.5rem;
-  background-color: #ffc506;
-  border-radius: 5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: black;
-  transition: all 200ms ease-in;
-}
-.itens-cardapio .info .pedir:hover {
-  background-color: rgba(240, 240, 240, 0.3);
-  color: #ffc506;
+.product .text {
+  flex: 1;
 }
 
 /*Contatos*/
@@ -285,18 +285,20 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font: size 1.8rem;
+  font-size: 1rem;
   color: white;
   padding-bottom: 4rem;
 }
 .contatos h3 {
-  font-size: 3.6rem;
+  font-size: 2.4rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
 }
 .contatos-secao {
   display: flex;
-  flex-direction: column;
+  gap: 1rem;
   justify-content: space-between;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 .contatos-secao div {
   cursor: pointer;
@@ -321,42 +323,53 @@ footer {
 
 /* Desktop (max-width: 1200px) */
 @media (max-width: 1200px) {
-  .content {
+  /*cardapio2*/
+  .product {
+    width: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 15%;
-    padding-left: 0;
+    align-items: flex-start;
   }
 
-  .sobre-nos img {
-    width: 600px;
-    margin-left: -2px;
+  .product img {
+    margin: 0 0 20px 0;
   }
+}
 
-  .content .list-menu {
-    width: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 10rem;
-  }
+.content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  padding-left: 0;
+}
 
-  .logo {
-    margin-right: 10rem;
-    width: 90px;
-    height: auto;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-  }
+.sobre-nos img {
+  width: 600px;
+  margin-left: -2px;
+}
 
-  .logo h3 {
-    color: white;
-    font-size: 1.8rem;
-    display: inline-block;
-  }
+.content .list-menu {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10rem;
+}
+
+.logo {
+  margin-right: 10rem;
+  width: 90px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logo h3 {
+  color: white;
+  font-size: 1.8rem;
+  display: inline-block;
 }
 
 /* Tablet (max-width: 992px) */
@@ -364,14 +377,24 @@ footer {
   html {
     font-size: 50%;
   }
-
-  .content .list-menu {
-    width: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 1rem;
+  /*cardápio2*/
+  .product {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
   }
+
+  .product img {
+    margin: 0 0 20px 0;
+  }
+}
+
+.content .list-menu {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
 }
 
 /* Mobile (max-width: 768px) */
@@ -379,15 +402,15 @@ footer {
   html {
     font-size: 40%;
   }
-  .itens-cardapio {
-    width: 90%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 500px));
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  /*cardápio2*/
+  .product {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product img {
+    margin: 0 0 20px 0;
   }
 
   .content {
@@ -465,132 +488,108 @@ footer {
     transform: rotate(-45deg) translate(20px, -6px);
   }
 
-  .itens-cardapio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 760px));
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .itens-cardapio .info h4 {
-    margin-left: 12rem;
-  }
-
   .contatos-secao {
     display: flex;
     flex-direction: column;
   }
 
-  .itens-cardapio .info h3 {
-    color: #ffc506;
-    font-size: 4rem;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-  }
-
-  .itens-cardapio .info h4 {
-    font-size: 2rem;
-    color: #cea10eb6;
-    text-transform: uppercase;
-    margin-bottom: 0.6rem;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 100px 100px;
-    margin-left: 5rem;
-  }
-
-  .itens-cardapio .info h4 span {
-    font-size: 2rem;
-    color: #cea10eb6;
-    margin-left: 1.5rem;
-  }
-
-  .itens-cardapio .info .pedir {
-    width: 220px;
-    height: 45px;
-    margin-top: 0.5rem;
-    background-color: #ffc506;
-    border-radius: 5px;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: black;
-    transition: all 200ms ease-in;
-  }
-}
-/* Mobile (max-width: 600px) */
-@media (max-width: 600px) {
-  .conteudo-principal h1 {
-    width: 300px;
-    text-align: center;
-    font-size: 4rem;
-  }
-
-  .conteudo-principal h2 {
-    font-size: 2rem;
-  }
-  .sobre-nos img {
-    width: 400px;
-    height: 250px;
-    margin-left: 10px;
-  }
-
-  .sobre-nos p {
-    text-align: center;
-    width: 400px;
-  }
-
-  .contatos-secao {
-    display: flex;
-    flex-direction: column;
-  }
-  @media (max-width: 500px) {
-    .contatos-secao {
-      display: flex;
+  /* Mobile (max-width: 600px) */
+  @media (max-width: 600px) {
+    /*cardápio2*/
+    .product {
+      width: 100%;
       flex-direction: column;
+      align-items: flex-start;
     }
-    .first-section h1 {
-      max-width: 100%;
-      color: #ffc506;
-      font-size: 6rem;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+
+    .product img {
+      margin: 0 0 20px 0;
     }
-  }
-  @media (max-width: 395px) {
-    .contatos-secao {
-      display: flex;
-      flex-direction: column;
+    .conteudo-principal h1 {
+      width: 300px;
+      text-align: center;
+      font-size: 4rem;
+    }
+
+    .conteudo-principal h2 {
+      font-size: 2rem;
     }
     .sobre-nos img {
-      width: 250px;
-      height: auto;
+      width: 400px;
+      height: 250px;
       margin-left: 10px;
     }
-    .contentsobre p {
+
+    .sobre-nos p {
       text-align: center;
-      width: 250px;
+      width: 400px;
     }
-    .first-section h1 {
-      max-width: 100%;
-      color: #ffc506;
-      font-size: 6rem;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
+
+    .contatos-secao {
+      display: flex;
+      flex-direction: column;
     }
-  }
-  .btn {
-    width: 64%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem; /* Optional: Adjust margin as needed */
-  }
-  .itens-cardapio .info h4 span {
-    width: 64%;
-    font-size: 2rem;
-    color: #cea10eb6;
-    margin-left: 1.5rem;
+    @media (max-width: 500px) {
+      /*cardápio2*/
+      .product {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .product img {
+        margin: 0 0 20px 0;
+      }
+      .contatos-secao {
+        display: flex;
+        flex-direction: column;
+      }
+      .first-section h1 {
+        max-width: 100%;
+        color: #ffc506;
+        font-size: 6rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+    }
+    @media (max-width: 395px) {
+      /*cardápio2*/
+      .product {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .product img {
+        margin: 0 0 20px 0;
+      }
+      .contatos-secao {
+        display: flex;
+        flex-direction: column;
+      }
+      .sobre-nos img {
+        width: 250px;
+        height: auto;
+        margin-left: 10px;
+      }
+      .contentsobre p {
+        text-align: center;
+        width: 250px;
+      }
+      .first-section h1 {
+        max-width: 100%;
+        color: #ffc506;
+        font-size: 6rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+    }
+    .btn {
+      width: 64%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem; /* Optional: Adjust margin as needed */
+    }
   }
 }
